@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ortolê</title>
+</head>
+<body>
+    <!--Header-->
+    <section class="container">
+        <div class="row">
+            <div class="col-3 topleft">
+                <img src="Imagens/Logo 1.jpg" alt="Logo Ortolê">
+                <h2 class="text-info fs-7 fw-semibold font-family-Inter">
+                    ORTOPEDIA TÉCNICA
+                </h2>
+            </div>
+            <div class="col"></div>
+            <div class="col-3 topright">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                    <path d="M18.9992 2.91818C20.0634 2.91409 21.1276 2.92479 22.1915 2.95026L22.4744 2.96047C22.8011 2.97213 23.1233 2.98672 23.5127 3.00422C25.0644 3.07713 26.1231 3.32213 27.0521 3.68234C28.0146 4.05276 28.8254 4.55443 29.6363 5.36526C30.3776 6.09385 30.9514 6.97518 31.3177 7.94797C31.6779 8.87693 31.9229 9.93713 31.9958 11.4888C32.0133 11.8767 32.0279 12.2005 32.0396 12.5271L32.0483 12.8101C32.0743 13.8735 32.0854 14.9372 32.0819 16.0009L32.0833 17.0888V18.9992C32.0869 20.0634 32.0758 21.1276 32.0498 22.1915L32.0411 22.4744C32.0294 22.8011 32.0148 23.1234 31.9973 23.5128C31.9244 25.0644 31.6765 26.1232 31.3177 27.0521C30.9526 28.026 30.3787 28.908 29.6363 29.6363C28.907 30.3776 28.0253 30.9514 27.0521 31.3178C26.1231 31.678 25.0644 31.923 23.5127 31.9959C23.1233 32.0134 22.8011 32.028 22.4744 32.0396L22.1915 32.0484C21.1276 32.0743 20.0634 32.0855 18.9992 32.0819L17.9113 32.0834H16.0023C14.9381 32.087 13.8739 32.0758 12.81 32.0498L12.5271 32.0411C12.1809 32.0285 11.8348 32.014 11.4888 31.9973C9.93709 31.9244 8.87834 31.6765 7.94792 31.3178C6.97475 30.9522 6.09327 30.3783 5.36522 29.6363C4.62299 28.9076 4.04867 28.0257 3.6823 27.0521C3.32209 26.1232 3.07709 25.0644 3.00417 23.5128C2.98793 23.1667 2.97335 22.8206 2.96042 22.4744L2.95313 22.1915C2.92625 21.1276 2.91409 20.0634 2.91667 18.9992V16.0009C2.9126 14.9372 2.9233 13.8735 2.94876 12.8101L2.95897 12.5271C2.97063 12.2005 2.98522 11.8767 3.00272 11.4888C3.07563 9.93568 3.32063 8.87838 3.68084 7.94797C4.04743 6.97471 4.62287 6.09362 5.36667 5.36672C6.09423 4.62406 6.97516 4.04922 7.94792 3.68234C8.87834 3.32213 9.93563 3.07713 11.4888 3.00422L12.5271 2.96047L12.81 2.95318C13.8734 2.9263 14.9371 2.91415 16.0008 2.91672L18.9992 2.91818ZM17.5 10.2098C16.5339 10.1962 15.5747 10.3747 14.6781 10.7349C13.7815 11.0952 12.9655 11.6301 12.2775 12.3085C11.5894 12.9868 11.0431 13.7952 10.6702 14.6866C10.2973 15.578 10.1052 16.5345 10.1052 17.5008C10.1052 18.467 10.2973 19.4236 10.6702 20.315C11.0431 21.2064 11.5894 22.0147 12.2775 22.6931C12.9655 23.3715 13.7815 23.9063 14.6781 24.2666C15.5747 24.6269 16.5339 24.8054 17.5 24.7917C19.4339 24.7917 21.2885 24.0235 22.656 22.656C24.0234 21.2886 24.7917 19.4339 24.7917 17.5001C24.7917 15.5662 24.0234 13.7115 22.656 12.3441C21.2885 10.9766 19.4339 10.2098 17.5 10.2098ZM17.5 13.1265C18.0812 13.1158 18.6586 13.221 19.1987 13.436C19.7387 13.651 20.2305 13.9714 20.6453 14.3786C21.0601 14.7857 21.3896 15.2715 21.6146 15.8074C21.8396 16.3434 21.9555 16.9188 21.9556 17.5C21.9557 18.0813 21.84 18.6567 21.6152 19.1928C21.3904 19.7288 21.061 20.2147 20.6464 20.622C20.2317 21.0293 19.74 21.3499 19.2 21.565C18.6601 21.7802 18.0826 21.8856 17.5015 21.8751C16.3411 21.8751 15.2283 21.4141 14.4079 20.5936C13.5874 19.7732 13.1265 18.6604 13.1265 17.5001C13.1265 16.3397 13.5874 15.2269 14.4079 14.4065C15.2283 13.586 16.3411 13.1251 17.5015 13.1251L17.5 13.1265ZM25.1563 8.02234C24.6858 8.04117 24.2409 8.24131 23.9146 8.58084C23.5884 8.92037 23.4062 9.37296 23.4062 9.8438C23.4062 10.3146 23.5884 10.7672 23.9146 11.1068C24.2409 11.4463 24.6858 11.6464 25.1563 11.6653C25.6397 11.6653 26.1034 11.4732 26.4453 11.1313C26.7871 10.7895 26.9792 10.3258 26.9792 9.84234C26.9792 9.35888 26.7871 8.89521 26.4453 8.55335C26.1034 8.21148 25.6397 8.01943 25.1563 8.01943V8.02234Z" fill="#198BAF" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                    <mask id="mask0_68_108" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="1" width="23" height="33">
+                        <path d="M26.25 9.18754H21.8655C21.0736 9.18754 20.4313 9.82921 20.4313 10.6218V15.6531H26.25L25.3976 21.1925H20.432V31.3542H14.0328V21.1925H8.75V15.6531H13.9643L14.0328 10.3958L14.0233 9.44056C14.0157 8.68238 14.1585 7.93022 14.4433 7.22755C14.7282 6.52488 15.1495 5.88564 15.6829 5.3468C16.2163 4.80796 16.8513 4.38019 17.551 4.08824C18.2508 3.79628 19.0015 3.64593 19.7597 3.64587H26.25V9.18754Z" fill="white" stroke="white" stroke-width="3.8" stroke-linejoin="round" />
+                    </mask>
+                    <g mask="url(#mask0_68_108)">
+                        <path d="M0 0H35V35H0V0Z" fill="#198BAF" />
+                    </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                    <path d="M27.7083 4.375C28.4819 4.375 29.2237 4.68229 29.7707 5.22927C30.3177 5.77625 30.625 6.51812 30.625 7.29167V27.7083C30.625 28.4819 30.3177 29.2237 29.7707 29.7707C29.2237 30.3177 28.4819 30.625 27.7083 30.625H7.29167C6.51812 30.625 5.77625 30.3177 5.22927 29.7707C4.68229 29.2237 4.375 28.4819 4.375 27.7083V7.29167C4.375 6.51812 4.68229 5.77625 5.22927 5.22927C5.77625 4.68229 6.51812 4.375 7.29167 4.375H27.7083ZM26.9792 26.9792V19.25C26.9792 17.9891 26.4783 16.7799 25.5867 15.8883C24.6951 14.9967 23.4859 14.4958 22.225 14.4958C20.9854 14.4958 19.5417 15.2542 18.8417 16.3917V14.7729H14.7729V26.9792H18.8417V19.7896C18.8417 18.6667 19.7458 17.7479 20.8688 17.7479C21.4102 17.7479 21.9295 17.963 22.3124 18.3459C22.6953 18.7288 22.9104 19.2481 22.9104 19.7896V26.9792H26.9792ZM10.0333 12.4833C10.6831 12.4833 11.3063 12.2252 11.7657 11.7657C12.2252 11.3063 12.4833 10.6831 12.4833 10.0333C12.4833 8.67708 11.3896 7.56875 10.0333 7.56875C9.37969 7.56875 8.75281 7.82841 8.29061 8.29061C7.82841 8.75281 7.56875 9.37969 7.56875 10.0333C7.56875 11.3896 8.67708 12.4833 10.0333 12.4833ZM12.0604 26.9792V14.7729H8.02083V26.9792H12.0604Z" fill="#198BAF" />
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!--Header-->
+    <!--Banner-->
+    <section class="banner-home">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex aligns-items-left justify-content-md-left">
+                    <h1>Viva sem limitações<br />com nossas soluções <br />ortopédicas</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex aligns-items-left justify-content-md-left">
+                    <p>Descubra a liberdade de movimento com<br />nossas órteses, próteses e palmilhas<br />personalizadas</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex aligns-items-left justify-content-md-left">
+                    <a href="#">
+                        experimente o conforto
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29" fill="none">
+                            <g clip-path="url(#clip0_12_5)">
+                                <path d="M15.3042 21.5231L22.4808 13.9999L15.2732 6.50643C15.2081 6.41797 15.1254 6.34509 15.0308 6.2927C14.9362 6.24031 14.8318 6.20964 14.7248 6.20277C14.6178 6.1959 14.5106 6.21299 14.4105 6.25288C14.3105 6.29277 14.2198 6.35453 14.1447 6.43398C14.0696 6.51343 14.0118 6.60872 13.9752 6.71339C13.9387 6.81805 13.9242 6.92966 13.9328 7.04065C13.9414 7.15165 13.9728 7.25943 14.025 7.35671C14.0772 7.45399 14.1488 7.5385 14.2352 7.60451L19.6278 13.2285L5.31093 13.2581C5.11244 13.2585 4.92225 13.3407 4.7822 13.4868C4.64215 13.6329 4.56371 13.8307 4.56413 14.0369C4.56456 14.243 4.64382 14.4405 4.78447 14.586C4.92512 14.7315 5.11565 14.813 5.31413 14.8126L19.631 14.7831L14.2616 20.4293C14.122 20.5759 14.0442 20.7742 14.0453 20.9804C14.0464 21.1867 14.1264 21.3841 14.2676 21.5291C14.4089 21.6741 14.5998 21.755 14.7984 21.7538C14.997 21.7527 15.187 21.6697 15.3266 21.523L15.3042 21.5231Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_12_5">
+                                    <rect width="27.9814" height="26.9424" fill="white" transform="translate(26.9424) rotate(89.8819)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Banner-->
+    <!--Por que as pessoas nos escolhere-->
+    <section class="container porqueescolhem">
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <h2>Por que as pessoas nos escolhem?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <span>É por isso que nos somos a escolha preferida<br />quando se trata de produtos ortopédicos</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <div class="row">
+                    <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                        <div class="box">
+                            <svg class="clock" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                                <path d="M26.7078 49.2078C14.281 49.2078 4.20779 39.1345 4.20779 26.7078C4.20779 14.281 14.281 4.20776 26.7078 4.20776C39.1345 4.20776 49.2078 14.281 49.2078 26.7078C49.2078 39.1345 39.1345 49.2078 26.7078 49.2078ZM26.7078 44.7078C31.4817 44.7078 36.0601 42.8113 39.4357 39.4357C42.8114 36.06 44.7078 31.4817 44.7078 26.7078C44.7078 21.9339 42.8114 17.3555 39.4357 13.9798C36.0601 10.6042 31.4817 8.70776 26.7078 8.70776C21.9339 8.70776 17.3555 10.6042 13.9799 13.9798C10.6042 17.3555 8.70779 21.9339 8.70779 26.7078C8.70779 31.4817 10.6042 36.06 13.9799 39.4357C17.3555 42.8113 21.9339 44.7078 26.7078 44.7078ZM28.9578 26.7078H37.9578V31.2078H24.4578V15.4578H28.9578V26.7078Z" fill="#054A60" />
+                            </svg>
+                            <h3>Entrega rápida</h3>
+                            <p>entre 7 e 21 dias</p>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                        <div class="box">
+                            <svg class="shield" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                                <path d="M27 4.5L9 11.25V24.9525C9 36.315 16.6725 46.9125 27 49.5C37.3275 46.9125 45 36.315 45 24.9525V11.25L27 4.5ZM40.5 24.9525C40.5 33.9525 34.7625 42.2775 27 44.82C19.2375 42.2775 13.5 33.975 13.5 24.9525V14.1975L27 9.4275L40.5 14.1975V24.9525ZM19.845 23.8275L16.65 27L24.615 34.965L37.35 22.23L34.1775 19.0575L24.6375 28.5975L19.845 23.8275Z" fill="#054A60" />
+                            </svg>
+                            <h3>Atendimento Personalizado</h3>
+                            <p>vamos até o paciente para retirar o molde e fazer as medidas, então realizamos a entrega à domicílio</p>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                        <div class="box">
+                            <svg class="hearth" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                                <path d="M22.9328 47.5515L22.6789 47.318L4.88516 30.7937C1.76719 27.8992 0 23.8367 0 19.5812V19.2461C0 12.0961 5.07812 5.9617 12.1062 4.62108C16.1078 3.8492 20.2008 4.77342 23.4609 7.06873C24.375 7.71873 25.2281 8.4703 26 9.33358C26.4266 8.84608 26.8836 8.3992 27.3711 7.9828C27.7469 7.6578 28.1328 7.35311 28.5391 7.06873C31.7992 4.77342 35.8922 3.8492 39.8937 4.61092C46.9219 5.95155 52 12.0961 52 19.2461V19.5812C52 23.8367 50.2328 27.8992 47.1148 30.7937L29.3211 47.318L29.0672 47.5515C28.2344 48.3234 27.1375 48.7601 26 48.7601C24.8625 48.7601 23.7656 48.3336 22.9328 47.5515ZM24.2836 14.7265C24.243 14.6961 24.2125 14.6555 24.182 14.6148L22.3742 12.5836L22.3641 12.5734C20.018 9.94295 16.4734 8.74452 13.0203 9.40467C8.2875 10.3086 4.875 14.432 4.875 19.2461V19.5812C4.875 22.4758 6.08359 25.2484 8.20625 27.2187L26 43.743L43.7938 27.2187C44.8441 26.243 45.682 25.0612 46.2551 23.7471C46.8283 22.433 47.1244 21.0149 47.125 19.5812V19.2461C47.125 14.4422 43.7125 10.3086 38.9898 9.40467C35.5367 8.74452 31.982 9.95311 29.6461 12.5734L29.6359 12.5836L29.6258 12.5937L27.818 14.625C27.7875 14.6656 27.7469 14.6961 27.7164 14.7367C27.2594 15.1937 26.6398 15.4476 26 15.4476C25.3602 15.4476 24.7406 15.1937 24.2836 14.7367V14.7265Z" fill="#054A60" />
+                            </svg>
+                            <h3>Qualidade de Fabricação</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--Por que as pessoas nos escolhere-->
+    <!--Citação-->
+    <section class="container-fluid citacao">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex aligns-items-center justify-content-md-center">
+                    <h2><span>“</span>É um orgulho poder fornecer, desde 2013 produtos e serviços de alta qualidade para toda a região de São Paulo. O que diferencia a Ortolê de outras empresas é nossa capacidade de nos conectarmos com os pacientes e lhes oferecer um produto de ótima qualidade <span class="aspas">,,</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex aligns-items-center justify-content-md-center">
+                    <p>• Nosso propósito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Citação-->
+    <!--Tipos de Produtos-->
+    <section class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col">
+                <section class="container tipoproduto">
+                    <div class="row">
+                        <div class="col d-flex aligns-items-left justify-content-md-left">
+                            <h2>Diferentes tipos de produtos</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex aligns-items-left justify-content-md-left">
+                            <p>Reconhecemos a singularidade de cada pessoa, com<br />necessidades e metas individuais, e é por isso que nos<br />empenhamos em criar órteses, próteses e palmilhas<br />personalizadas para atender a cada paciente de maneira<br />única.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex aligns-items-left justify-content-md-left">
+                            <a href="#">
+                                saiba mais
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29" fill="none">
+                                    <g clip-path="url(#clip0_12_5)">
+                                        <path d="M15.3042 21.5231L22.4808 13.9999L15.2732 6.50643C15.2081 6.41797 15.1254 6.34509 15.0308 6.2927C14.9362 6.24031 14.8318 6.20964 14.7248 6.20277C14.6178 6.1959 14.5106 6.21299 14.4105 6.25288C14.3105 6.29277 14.2198 6.35453 14.1447 6.43398C14.0696 6.51343 14.0118 6.60872 13.9752 6.71339C13.9387 6.81805 13.9242 6.92966 13.9328 7.04065C13.9414 7.15165 13.9728 7.25943 14.025 7.35671C14.0772 7.45399 14.1488 7.5385 14.2352 7.60451L19.6278 13.2285L5.31093 13.2581C5.11244 13.2585 4.92225 13.3407 4.7822 13.4868C4.64215 13.6329 4.56371 13.8307 4.56413 14.0369C4.56456 14.243 4.64382 14.4405 4.78447 14.586C4.92512 14.7315 5.11565 14.813 5.31413 14.8126L19.631 14.7831L14.2616 20.4293C14.122 20.5759 14.0442 20.7742 14.0453 20.9804C14.0464 21.1867 14.1264 21.3841 14.2676 21.5291C14.4089 21.6741 14.5998 21.755 14.7984 21.7538C14.997 21.7527 15.187 21.6697 15.3266 21.523L15.3042 21.5231Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12_5">
+                                            <rect width="27.9814" height="26.9424" fill="white" transform="translate(26.9424) rotate(89.8819)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container botao-tipoproduto">
+                    <!--Parte dos botões para navegação-->
+                    <div class="row">
+                        <div class="col-3 d-flex aligns-items-center justify-content-md-center">
+                            <button type="button" data-tipo="tutor" class="btn btn-light btn-tipoproduto tipoproduto-active">Tutor longo</button>
+                        </div>
+                        <div class="col-3 d-flex aligns-items-center justify-content-md-center">
+                            <button type="button" data-tipo="protese" class="btn btn-light btn-tipoproduto">Prótese</button>
+                        </div>
+                        <div class="col-3 d-flex aligns-items-center justify-content-md-center">
+                            <button type="button" data-tipo="ortese" class="btn btn-light btn-tipoproduto">Órtese</button>
+                        </div>
+                        <div class="col-3 d-flex aligns-items-center justify-content-md-center">
+                            <button type="button" data-tipo="palmilha" class="btn btn-light btn-tipoproduto">Palmilhas</button>
+                        </div>
+                    </div>
+                    <!--Parte dos botões para navegação-->
+                    <!--Detalhes do tipo de produto Tutor Longo-->
+                    <div class="row detalheTipoProduto" id="divTutorLongo">
+                        <div class="col-8 d-flex aligns-items-left justify-content-md-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Tutor longo
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            texto
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Modelos
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <ul>
+                                            <li>Cinto pélvico</li>
+                                            <li>Apoio isuquiático</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div id="carouselTutor" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTutor" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselTutor" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Detalhes do tipo de produto Tutor Longo-->
+                    <!--Detalhes do tipo de produto Prótese-->
+                    <div class="row detalheTipoProduto" id="divProtese">
+                        <div class="col-8 d-flex aligns-items-left justify-content-md-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Prótese
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            texto
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Modelos
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <ul>
+                                            <li>Transtibial</li>
+                                            <li>Transfemural</li>
+                                            <li>Desarticulação de joelho</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div id="carouselProtese" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProtese" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProtese" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Detalhes do tipo de produto Prótese-->
+                    <!--Detalhes do tipo de produto Órtese-->
+                    <div class="row detalheTipoProduto" id="divOrtese">
+                        <div class="col-8 d-flex aligns-items-left justify-content-md-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Órtese
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            texto
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Modelos
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <ul>
+                                            <li>Híbrida</li>
+                                            <li>Fixa</li>
+                                            <li>Articulada</li>
+                                            <li>Reação ao solo</li>
+                                            <li>Neuro-fisiológica</li>
+                                            <li>S.M.O</li>
+                                            <li>Geno-varo/valgo</li>
+                                            <li>Extensão de joelho</li>
+                                            <li>Chopart</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div id="carouselOrtese" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOrtese" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselOrtese" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>                            
+                        </div>
+                    </div>
+                    <!--Detalhes do tipo de produto Órtese-->
+                    <!--Detalhes do tipo de produto Palmilhas-->
+                    <div class="row detalheTipoProduto" id="divPalmilhas">
+                        <div class="col-8 d-flex aligns-items-left justify-content-md-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Palmilhas
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            texto
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            Modelos
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <ul>
+                                            <li>Com apoio do arco medial</li>
+                                            <li>Planas com compensação</li>
+                                            <li>Helicoidal</li>
+                                            <li>Valente</li>
+                                            <li>Elevação de calçado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div id="carouselPalmilha" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens/tiposprodutos.jpg" class="d-block w-100 rounded-3" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPalmilha" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselPalmilha" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Detalhes do tipo de produto Palmilhas-->
+                </section>
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </section>
+    <!--Tipos de Produtos-->
+    <!--Feedback dos clientes-->
+    <section class="container-fluid feedback">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex aligns-items-left justify-content-md-left">
+                    <h2>Feedback dos clientes</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex aligns-items-left justify-content-md-left">
+                    <p>Sua satisfação é nossa maior motivação e inspiração<br />para continuarmos a oferecer os melhores cuidados e<br />produtos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container feedback-detalhes">
+        <div class="row">
+            <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img src="imagens/tiposprodutos.jpg" class="rounded-circle" />
+                        <h5 class="card-title">Nome da pessoa</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Quem é a pessoa</h6>
+                        <p class="card-text">Texto do feedback</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img src="imagens/tiposprodutos.jpg" class="rounded-circle" />
+                        <h5 class="card-title">Nome da pessoa</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Quem é a pessoa</h6>
+                        <p class="card-text">Texto do feedback</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex aligns-items-center justify-content-md-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img src="imagens/tiposprodutos.jpg" class="rounded-circle" />
+                        <h5 class="card-title">Nome da pessoa</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Quem é a pessoa</h6>
+                        <p class="card-text">Texto do feedback</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Feedback dos clientes-->
+    <!--Citação CEO-->
+    <section class="container-fluid citacao">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex aligns-items-center justify-content-md-center">
+                    <h2><span>“</span>Estamos comprometidos em ajudar nossos<br />pacientes a retomar suas atividades diárias,<br />alcançar suas metas e viver vidas ativas e<br />gratificantes.<span class="aspas">,,</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex aligns-items-center justify-content-md-center">
+                    <p>• CEO da Ortolê</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Citação CEO-->
+    <!--Comece a caminhar-->
+    <section class="container comeceCaminhar">
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <h2>Comece a caminhar em direção<br />ao seu bem-estar hoje mesmo!</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <p>Agende já seu orçamento e descubra como nossos produtos<br />podem fazer a diferença na sua vida.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex aligns-items-center justify-content-md-center">
+                <a href="#">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    Entrar em contato
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29" fill="none">
+                        <g clip-path="url(#clip0_12_5)">
+                            <path d="M15.3042 21.5231L22.4808 13.9999L15.2732 6.50643C15.2081 6.41797 15.1254 6.34509 15.0308 6.2927C14.9362 6.24031 14.8318 6.20964 14.7248 6.20277C14.6178 6.1959 14.5106 6.21299 14.4105 6.25288C14.3105 6.29277 14.2198 6.35453 14.1447 6.43398C14.0696 6.51343 14.0118 6.60872 13.9752 6.71339C13.9387 6.81805 13.9242 6.92966 13.9328 7.04065C13.9414 7.15165 13.9728 7.25943 14.025 7.35671C14.0772 7.45399 14.1488 7.5385 14.2352 7.60451L19.6278 13.2285L5.31093 13.2581C5.11244 13.2585 4.92225 13.3407 4.7822 13.4868C4.64215 13.6329 4.56371 13.8307 4.56413 14.0369C4.56456 14.243 4.64382 14.4405 4.78447 14.586C4.92512 14.7315 5.11565 14.813 5.31413 14.8126L19.631 14.7831L14.2616 20.4293C14.122 20.5759 14.0442 20.7742 14.0453 20.9804C14.0464 21.1867 14.1264 21.3841 14.2676 21.5291C14.4089 21.6741 14.5998 21.755 14.7984 21.7538C14.997 21.7527 15.187 21.6697 15.3266 21.523L15.3042 21.5231Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_12_5">
+                                <rect width="27.9814" height="26.9424" fill="white" transform="translate(26.9424) rotate(89.8819)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--Comece a caminhar-->
+    <!--Footer-->
+    <section class="container-fluid footer">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-3">
+                <img src="Imagens/Logo 1.jpg" alt="Logo Ortolê">
+                <h3>
+                    ORTOPEDIA TÉCNICA
+                </h3>
+                <p>Nossa missão é proporcionar<br />soluções personalizadas para<br />uma vida ativa e sem<br />limitações.</p>
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-3">
+                <h2>
+                    CONTATO
+                </h2>
+                <ul>
+                    <li>
+                        (11) 98215-6319
+                    </li>
+                    <li>
+                        ortole@outlook.com
+                    </li>
+                    <li>
+                        @ortole.ortese
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+
+    <script type="text/javascript" src="home.js"></script>
+</body>
+</html>
