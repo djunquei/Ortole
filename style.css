@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
 
 * {
     font-family: 'Roboto Serif', serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
 
 h2 {
     font-weight: bold;
@@ -13,36 +13,44 @@ h2 {
     font-style: normal;
     font-weight: 600;
     line-height: 103.4%; /* 36.19px */
-    letter-spacing: 1.75px;
+    letter-spacing: 1.00px;
 }
 
-.topleft {
+.header {
     margin-top: 7px;
-    height: 49px;
+    height: 70px;
     flex-shrink: 0;
 }
 
-    .topleft h2 {
-        margin-left: 12px;
+    .header img {
+        width: 200px;
+    }
+
+    .header h2 {
+        margin-left: 25px;
         color: #4ABEE2;
-        font-size: 12px;
         font-family: 'Inter', sans-serif;
+        font-size: 12px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
     }
 
-.topright svg {
-    margin-top: 31px;
+.header-left {
+    align-items: center;
+    justify-content: left;
+}
+
+.header-rigth {
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .banner-home {
     margin-top: 20px;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
     justify-content: center;
     height: 510px;
     background-size: cover;
@@ -57,7 +65,8 @@ h2 {
         font-style: normal;
         font-weight: 600;
         line-height: 103.4%; /* 46.53px */
-        letter-spacing: 2.25px;
+        letter-spacing: 3.50px;
+        color: #FFF;
     }
 
     .banner-home p {
@@ -65,43 +74,68 @@ h2 {
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: 103.4%; /* 20.68px */
         letter-spacing: 1px;
+        color: #FFF;
     }
 
     .banner-home a {
         color: #F9F9F9;
-        width: 308px;
-        height: 44px;
+        width: 315px;
+        height: 50px;
         border-radius: 147px;
-        background: #198BAF;
+        background: #006E92;
         font-size: 20px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         letter-spacing: 1px;
         text-align: center;
+        line-height: 103.4%;
+        padding-top: 10px;
+        text-decoration: none;
     }
 
 .porqueescolhem {
-    margin-top: 50px;
+    margin-top: 67px;
+}
+
+    .porqueescolhem h2 {
+        margin-bottom: 19px;
+        color: #231D1E;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 1.75px;
+        text-align: center;
+    }
+
+.porissoescolhem {
+    color: #231D1E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .box {
-    width: 187px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #F9F9F9;
     box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 50px;
+    padding: 15px;
 }
 
     .box h3 {
-        margin-top: 9px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-weight: bold;
         width: 100%;
         color: #000;
         text-align: center;
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 500;
         line-height: 103.4%; /* 15.51px */
         letter-spacing: 0.75px;
@@ -109,11 +143,10 @@ h2 {
 
     .box p {
         font-weight: bold;
-        margin-top: 11px;
         width: 100%;
         color: #000;
         text-align: center;
-        font-size: 10px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 500;
         line-height: 103.4%; /* 10.34px */
@@ -121,15 +154,13 @@ h2 {
     }
 
 .clock {
-    margin-top: 17px;
-    margin-left: 71px;
+    margin-left: 67px;
     width: 54px;
     height: 54px;
     flex-shrink: 0;
 }
 
 .shield {
-    margin-top: 15px;
     margin-left: 67px;
     width: 54px;
     height: 54px;
@@ -137,13 +168,15 @@ h2 {
 }
 
 .hearth {
-    margin-top: 17px;
-    margin-left: 66px;
+    margin-left: 67px;
 }
 
 .citacao {
-    margin-top: 40px;
-    background-color: #064a61;
+    margin-top: 45px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Imagens/backgroudcomlogos.jpg);
+    height: 266px;
 }
 
     .citacao h2 {
@@ -178,13 +211,21 @@ h2 {
     letter-spacing: -5px;
 }
 
+.carouselTipoProduto {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
 .tipoproduto {
     margin-top: 40px;
-    height: 320px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-image: url('Imagens/tiposprodutos.jpg');
 }
+
+    .tipoproduto h2 {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
 
     .tipoproduto p {
         margin-top: 34px;
@@ -199,21 +240,47 @@ h2 {
 
     .tipoproduto a {
         margin-top: 35px;
+        margin-bottom: 10px;
         color: #F9F9F9;
-        width: 170px;
-        height: 44px;
+        width: 180px;
+        height: 50px;
         border-radius: 147px;
-        background-color: #198BAF;
+        background-color: #006E92;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         letter-spacing: 1px;
         text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        display: block;
     }
+
+.imgLevantamentoPeso {
+    margin-left: -200px;
+    margin-bottom: -350px
+}
 
 .botao-tipoproduto {
     margin-top: 35px;
 }
+
+#divTutorLongo {
+    display: flex;
+}
+
+#divProtese {
+    display: none;
+}
+
+#divOrtese {
+    display: none;
+}
+
+#divPalmilhas {
+    display: none;
+}
+
 
 .btn-tipoproduto {
     background-color: lightgray;
@@ -222,49 +289,83 @@ h2 {
 }
 
 .tipoproduto-active {
-    background-color: #198BAF;
+    background-color: #006E92;
     color: white;
 }
 
 .detalheTipoProduto {
     margin-top: 30px;
-    background-color: #198BAF;
+    background-color: #006E92;
     border-radius: 20px;
+    padding: 30px;
 }
 
     .detalheTipoProduto h3 {
-        margin-top: 20px;
-        color: white;
+        color: #FFF;
+        font-family: Roboto Serif;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 103.4%; /* 36.19px */
+        letter-spacing: 1.75px;
     }
 
     .detalheTipoProduto p {
-        color: white;
+        color: #FFF;
+        font-family: Roboto Serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
     }
 
     .detalheTipoProduto ul {
-        color: white;
+        list-style-type: none;
+        list-style-image: url('imagens/logoBranco.png');
     }
 
-#carouselTutor {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-}
+        .detalheTipoProduto ul li {
+            margin-bottom: 10px;
+            color: #FFF;
+            font-family: Roboto Serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+    .detalheTipoProduto a {
+        margin-bottom: 20px;
+        color: #F9F9F9;
+        width: 180px;
+        height: 30px;
+        border-radius: 147px;
+        background-color: #006E92;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: center;
+        padding-top: 4px;
+        text-decoration: none;
+        border: 1px solid;
+    }
 
 .feedback {
     margin-top: 40px;
-    background-color: #064a61;
+    position: relative;
+    height: 291px;
 }
 
     .feedback h2 {
-        margin-top: 40px;
+        margin-top: 83px;
         color: #FFF;
-        text-align: center;
-        font-size: 29px;
+        text-align: left;
+        font-size: 35px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 103.4%; /* 29.986px */
-        letter-spacing: 1.45px;
+        letter-spacing: 1.75px;
     }
 
     .feedback p {
@@ -272,12 +373,30 @@ h2 {
         margin-bottom: 40px;
         color: #FFF;
         text-align: left;
-        font-size: 15px;
+        font-size: 20px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 103.4%; /* 15.51px */
-        letter-spacing: 0.75px;
+        letter-spacing: 1px;
     }
+
+.containerfeedback {
+    position: relative;
+}
+
+section.container-fluid.feedback:before {
+    content: "";
+    width: 58.33333333%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #064a61;
+    border-radius: 0 145px 145px 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Imagens/backgroudcomlogoscurvado.jpg);
+}
 
 .feedback-detalhes {
     margin-top: 80px;
@@ -295,16 +414,42 @@ h2 {
 
     .comeceCaminhar a {
         color: #F9F9F9;
-        width: 308px;
-        height: 44px;
+        width: 315px;
+        height: 50px;
         border-radius: 147px;
-        background: #198BAF;
+        background: #006E92;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         letter-spacing: 1px;
         text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
     }
+
+    .comeceCaminhar h2 {
+        color: #054A60;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 103.4%; /* 36.19px */
+        letter-spacing: 1.75px;
+        text-align: center;
+    }
+
+    .comeceCaminhar p {
+        color: #000;
+        padding-top: 25px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 103.4%; /* 20.68px */
+        letter-spacing: 1px;
+    }
+
+.entrarcontato {
+    padding-top: 34px;
+}
 
 .footer {
     margin-top: 40px;
@@ -313,7 +458,8 @@ h2 {
 }
 
     .footer img {
-        margin-top: 40px;
+        margin-top: 20px;
+        margin-left: -15px
     }
 
     .footer h2 {
@@ -328,7 +474,8 @@ h2 {
     }
 
     .footer h3 {
-        color: #FFF;
+        margin-top: 5px;
+        color: #4ABEE2;
         text-align: left;
         font-size: 20px;
         font-style: normal;
@@ -338,9 +485,121 @@ h2 {
     }
 
     .footer p {
-        color: white;
+        margin-top: 15px;
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 103.4%; /* 15.51px */
+        letter-spacing: 0.75px;
     }
 
     .footer ul {
-        color: white;
+        padding-top: 28px;
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 103.4%; /* 15.51px */
+        letter-spacing: 1px;
     }
+
+    .footer li {
+        margin-bottom: 20px;
+    }
+
+
+@media screen and (max-width: 575.98px) {
+    .banner-home {
+        background-image: url('Imagens/BannerMobile.jpg');
+    }
+
+    .citacao {
+        height: auto;
+    }
+
+    .citacao h2 {
+        font-size: 16px;
+    }
+
+    .tipoproduto h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tipoproduto p {
+        text-align: center;
+    }
+
+    .botaoSaibaMais {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tipoproduto a {
+        margin-top: 0px;
+    }
+
+    .imgPalmilha {
+        width: 168px;
+        height: 160px;
+    }
+
+    .imgLevantamentoPeso {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 168px;
+        height: 160px;
+    }
+
+    .botao-tipoproduto {
+        display: none;
+    }
+    
+    #divTutorLongo {
+        display: block;
+    }
+
+    #divProtese {
+        display: block;
+    }
+
+    #divOrtese {
+        display: block;
+    }
+    
+    #divPalmilhas {
+        display: block;
+    }
+
+    section.container-fluid.feedback:before {
+        content: "";
+        width: 91.66666667%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #064a61;
+        border-radius: 0 145px 145px 0;
+        background-size: cover;
+        background-position: center;
+        background-image: url(Imagens/backgroudcomlogoscurvado.jpg);
+    }
+
+    .card-body img {
+        width: 150px;
+        height: 150px;
+        margin-top: -100px;
+    }
+
+    .comeceCaminhar h2 {
+        font-size: 30px;
+    }
+
+    .comeceCaminhar p {
+        font-size: 16px;
+    }
+}
